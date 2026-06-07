@@ -6,7 +6,7 @@ const AddIcon = ({ onClick }) => {
     <div
       role="button"
       onClick={onClick}
-      className="absolute right-5 top-5 text-black rounded-full bg-black"
+      className="absolute right-5 top-5 text-black rounded-full bg-transparent"
     >
       <CirclePlus size={40} color="#EFBF04" strokeWidth={1} />
     </div>
