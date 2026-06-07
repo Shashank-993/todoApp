@@ -2,7 +2,7 @@
 
 export default function SearchBar({search,setSearch}) {
   return (
-    <div className="z-10 flex items-center border pl-4 gap-2 bg-transparent border-gray-500/30 w-[80%] h-auto p-1 rounded-full overflow-hidden max-w-md">
+    <div className="z-10 flex items-center border pl-4 gap-2 bg-transparent border-gray-500/30 w-[80%] p-1 rounded-full  max-w-md">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"
@@ -20,7 +20,7 @@ export default function SearchBar({search,setSearch}) {
       />
       <button
         type="submit"
-        className="bg-white/20  w-32 h-full rounded-full text-sm text-white"
+        className="bg-white/20  w-32 h-8 rounded-full text-sm text-white"
       >
         Search
       </button>

@@ -3,22 +3,21 @@ import ModalPortal from "./ModalPortal";
 import { useForm } from "react-hook-form";
 
 const EditForm = ({ onClose, editingText, setEditingText, saveEdit }) => {
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <ModalPortal>
-      <div className="z-30 fixed inset-0 bg-black/5 backdrop-blur-sm text-white flex justify-center items-center">
+      <div className="z-30 fixed inset-0 bg-black/70 backdrop-blur-sm text-white flex justify-center items-center">
         <form
           onSubmit={handleSubmit}
-          className="relative rounded-md w-[80%] h-auto flex flex-col gap-4 p-4 max-w-xl"
+          className="relative rounded-md w-[80%] h-auto flex flex-col gap-4 p-4 max-w-md"
         >
           <div className="absolute inset-0 rounded-md bg-white/10" />
           <div className="flex flex-col gap-2">
             <label htmlFor="todo" className="text-xl">
-              Add Todo:
+              Edit Todo:
             </label>
             <input
               type="text"
@@ -39,7 +38,7 @@ const EditForm = ({ onClose, editingText, setEditingText, saveEdit }) => {
               id="date"
               value={editingText.date}
               onChange={(e) =>
-                setEditingText({ ...editingText, date:e.target.value })
+                setEditingText({ ...editingText, date: e.target.value })
               }
               className="border border-white/20 rounded-md z-40 p-2 outline-none"
             />

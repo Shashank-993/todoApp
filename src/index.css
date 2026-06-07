@@ -11,7 +11,7 @@
 
   /* 1. Modern Standard Properties (Firefox & modern Chrome/Edge/Safari) */
   scrollbar-width: thin;               /* Options: auto | thin | none */
-  scrollbar-color: #000 transparent;    /* Format: thumb_color track_color */
+  scrollbar-color: #D3AF37 transparent;    /* Format: thumb_color track_color */
 }
 
 @theme inline {

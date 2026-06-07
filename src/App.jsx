@@ -94,11 +94,11 @@ const App = () => {
   );
   return (
     <>
+      <div className="relative overflow-x-hidden bg-black w-full min-h-screen text-white flex flex-col justify-start items-center">
       <Header />
-      <div className="relative bg-black h-screen w-screen min-h-screen text-white flex flex-col justify-center items-center">
         <div className="absolute inset-0 bg-white/10" />
         <SearchBar search={search} setSearch={setSearch} />
-        {!todos.length ? <p>What are you upto today !</p> : ""}
+        {!todos.length ? <p className="mt-10 text-xl sm:text-3xl">What are you upto today !</p> : ""}
         <DisplayTodo
           todos={filteredTodos}
           completed={completed}
@@ -124,7 +124,7 @@ const App = () => {
           />
         )}
       </div>
-      <Footer />
+      
     </>
   );
 };

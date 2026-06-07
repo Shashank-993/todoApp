@@ -15,10 +15,10 @@ const AddTodo = ({onClose, add }) => {
 
   return (
     <ModalPortal>
-      <div className="z-30 fixed inset-0 bg-black/5 backdrop-blur-sm text-white flex justify-center items-center">
+      <div className="z-30 fixed inset-0 bg-black/70 backdrop-blur-sm text-white flex justify-center items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="relative rounded-md w-[80%] h-auto flex flex-col gap-4 p-4 max-w-xl"
+          className="relative rounded-md w-[80%] h-auto flex flex-col gap-4 p-4 max-w-md"
         >
           <div className="absolute inset-0 rounded-md bg-white/10" />
           <div className="flex flex-col gap-2">

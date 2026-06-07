@@ -1,19 +1,11 @@
 import React from "react";
 import CheckBox, { Checkbox } from "./ui/CheckBox";
-import { Trash } from "lucide-react";
 import { Trash2 } from "lucide-react";
 import { Pen } from "lucide-react";
 
-const DisplayTodo = ({
-  todos,
-  remove,
-  setEdit,
-  completed,
-  editingId,
-  setEditingId,
-}) => {
+const DisplayTodo = ({ todos, remove, completed, setEditingId }) => {
   return (
-    <div className="mt-5 w-[80%] h-[80%] space-y-8 max-w-xl">
+    <div className="mt-5 w-[80%] h-full space-y-8 max-w-xl">
       {!todos ? (
         <p>No search found!</p>
       ) : (
@@ -42,7 +34,7 @@ const DisplayTodo = ({
                   : "No deadline!"}
             </p>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2.5 min-w-0">
               <CheckBox
                 role="button"
                 onClick={() => completed(todo.id)}
@@ -50,9 +42,9 @@ const DisplayTodo = ({
               />
 
               <h1
-                className={
-                  todo.checked ? "text-green-500 text-lg" : "text-white text-lg"
-                }
+                className={`text-lg truncate ${
+                  todo.checked ? "text-green-500" : "text-white"
+                }`}
               >
                 {todo.todo}
               </h1>
